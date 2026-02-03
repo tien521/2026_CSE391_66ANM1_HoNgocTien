@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HR Management</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f0f2f5;
+      }
+      header {
+        background-color: #212529;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      nav input {
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      nav button {
+        padding: 5px 10px;
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      main {
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+      }
+      article {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f8f9fa;
+      }
+      .btn-add {
+        background-color: #0d6efd;
+        color: white;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+      }
+      .btn-edit {
+        background-color: #ffc107;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 3px;
+      }
+      .btn-delete {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 3px;
+      }
+      section {
+        border: 2px solid #0d6efd;
+        margin-top: 30px;
+        background: white;
+      }
+      section header {
+        background-color: #0d6efd;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: block;
+      }
+      form {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+      }
+      label input,
+      label select {
+        margin-top: 5px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        font-weight: normal;
+      }
+      footer {
+        padding: 10px;
+        text-align: right;
+        background: #f8f9fa;
+        border-top: 1px solid #ddd;
+      }
+      .btn-save {
+        background-color: #198754;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HR Management</h2>
+      <nav>
+        <input type="text" placeholder="Search..." />
+        <button>Search</button>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h3>Employee</h3>
+        <button class="btn-add">+ Add</button>
+      </article>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Position</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Fatima Beatriz</td>
+            <td>Fatima Beatriz@gmail.com</td>
+            <td>0985674321</td>
+            <td>Staff</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Gabriel Hanna</td>
+            <td>Gabriel Hanna@gmail.com</td>
+            <td>0353674231</td>
+            <td>Staff</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Charles Diya</td>
+            <td>Charles Diya@gmail.com</td>
+            <td>0347658833</td>
+            <td>Manager</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Frank Lamdo</td>
+            <td>Frank Lamdo@gmail.com</td>
+            <td>0975444768</td>
+            <td>Manager</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>5</td>
+            <td>Louis Tom</td>
+            <td>Louis Tom@gmail.com</td>
+            <td>0789568223</td>
+            <td>Staff</td>
+            <td>
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <section>
+      <header>New Employee</header>
+      <form>
+        <label>Name <input type="text" /></label>
+        <label>Email <input type="email" /></label>
+        <label>Phone <input type="text" /></label>
+        <label>
+          Position
+          <select>
+            <option>Select Position---</option>
+            <option>Staff</option>
+            <option>Manager</option>
+            <option>CEO</option>
+          </select>
+        </label>
+        <fieldset style="border: none; padding: 0; margin: 0">
+          <legend style="font-weight: bold">Sex</legend>
+          <input type="radio" name="sex" /> Male
+          <input type="radio" name="sex" /> Female
+        </fieldset>
+      </form>
+      <footer>
+        <button class="btn-save">Save</button>
+        <button type="button" style="padding: 8px 20px">Cancel</button>
+      </footer>
+    </section>
+  </body>
+</html>
