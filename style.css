@@ -1,0 +1,192 @@
+/* TODO 1: Universal selector - Reset margin và padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Giúp tính toán kích thước chuẩn hơn */
+}
+
+/* TODO 2: Type selector - Định dạng cho toàn bộ body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* TODO 3: ID selector - Định dạng Header chính */
+#main-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TODO 4: Class selector - Định dạng cho các link trong menu */
+.nav-link {
+  margin: 0;
+}
+
+/* TODO 5: Group selector - Định dạng font chữ cho các thẻ tiêu đề */
+h1,
+h2,
+h3 {
+  font-family: "Georgia", serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+/* TODO 6: Descendant selector - Định dạng các thẻ 'a' nằm bên trong 'nav' */
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* TODO 7: Pseudo-class selector - Hiệu ứng khi di chuột (hover) */
+a:hover {
+  color: #ff6600;
+  background-color: #eee;
+  transition: 0.3s; /* Thêm hiệu ứng mượt mà */
+}
+
+/* Thêm một chút padding cho nội dung chính */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Bước 1: Đảm bảo box-sizing được áp dụng cho toàn trang */
+* {
+  box-sizing: border-box;
+}
+
+/* Bước 2: Style cho .posts container */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+/* Bước 3: Style cho .card */
+.card {
+  flex: 1 1 300px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .posts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Bước 4: Style cho nút .btn */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #0056b3;
+  color: white;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+/* Responsive: Tự động giảm cột khi màn hình nhỏ */
+.gallery {
+  /* TODO: Dùng auto-fit/auto-fill */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} /* Header sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* TODO: Thêm box-shadow để tạo hiệu ứng nổi */
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.scroll-top:hover {
+  /* TODO: background: #0056b3, transform: scale(1.1) */
+  background: #0056b3;
+  transform: scale(1.1);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    /* TODO: flex-direction: column */
+    flex-direction: column;
+  }
+}
