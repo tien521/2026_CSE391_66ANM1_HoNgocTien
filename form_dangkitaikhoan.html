@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng Ký Nhiều Bước</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="step-progress">
+        <div class="step active" id="p-1">1</div>
+        <div class="line"></div>
+        <div class="step" id="p-2">2</div>
+        <div class="line"></div>
+        <div class="step" id="p-3">3</div>
+      </div>
+
+      <form id="multiStepForm">
+        <section class="form-step active" id="step-1">
+          <h3>Bước 1: Thông tin cá nhân</h3>
+          <input type="text" id="fullname" placeholder="Họ và tên" />
+          <input type="date" id="dob" />
+          <select id="gender">
+            <option value="">Chọn giới tính</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+          </select>
+          <div class="btn-group">
+            <button type="button" class="btn-next">Tiếp theo</button>
+          </div>
+        </section>
+        <section class="form-step" id="step-2">
+          <h3>Bước 2: Thông tin tài khoản</h3>
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Mật khẩu" />
+          <input type="password" id="confirm" placeholder="Xác nhận mật khẩu" />
+          <div class="btn-group">
+            <button type="button" class="btn-prev">Quay lại</button>
+            <button type="button" class="btn-next">Tiếp theo</button>
+          </div>
+        </section>
+
+        <section class="form-step" id="step-3">
+          <h3>Bước 3: Xác nhận thông tin</h3>
+          <div id="summary" class="summary-box"></div>
+          <div class="btn-group">
+            <button type="button" class="btn-prev">Quay lại</button>
+            <button type="submit" class="btn-submit">Hoàn tất</button>
+          </div>
+        </section>
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
